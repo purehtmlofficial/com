@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>PureHTML | Premium Web Studio</title>
+  <link rel="icon" href="Diamond.webp" type="image/webp">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- AOS Animation Library -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="PureHTML | Premium Website in 1 Day">
+  <meta name="description" content="Get your HTML premium website designed, delivered, and deployed — all in just 1 day. Built live, fully mobile-friendly, and beautifully custom.">
+
+  <!-- Open Graph Meta Tags -->
+<meta property="og:title" content="PureHTML | Website in Just 1 Day">
+<meta property="og:description" content="Premium HTML websites delivered live at your place in just 1 day.">
+<meta property="og:image" content="https://purehtmlofficial.github.io/com/og-preview.webp">
+<meta property="og:url" content="https://purehtmlofficial.github.io/com/">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PureHTML | Website in Just 1 Day">
+<meta name="twitter:description" content="Premium HTML websites delivered live at your place in just 1 day.">
+<meta name="twitter:image" content="https://purehtmlofficial.github.io/com/og-preview.webp">
+<meta name="twitter:url" content="https://purehtmlofficial.github.io/com/">
+
+
+</head>
+
+  
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle at center, #060606 0%, #000000 100%);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .hero-futuristic {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      overflow: hidden;
+      padding: 2rem;
+    }
+
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .bg-grid {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      background-image: repeating-linear-gradient(0deg, transparent, transparent 29px, rgba(255, 255, 255, 0.03) 30px),
+                        repeating-linear-gradient(90deg, transparent, transparent 29px, rgba(255, 255, 255, 0.03) 30px);
+      animation: scrollGrid 60s linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes scrollGrid {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(-30px, -30px); }
+    }
+
+    .bg-holograms {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .bg-holograms svg {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      opacity: 0.05;
+      fill: #0fffc1;
+      animation: floatSvg 12s ease-in-out infinite alternate;
+    }
+
+    .bg-holograms svg:nth-child(2) { top: 10%; left: 15%; animation-delay: 3s; }
+    .bg-holograms svg:nth-child(3) { top: 70%; left: 80%; animation-delay: 6s; }
+    .bg-holograms svg:nth-child(4) { top: 50%; left: 45%; animation-delay: 9s; }
+
+    @keyframes floatSvg {
+      from { transform: translateY(0) scale(1); opacity: 0.04; }
+      to { transform: translateY(-20px) scale(1.1); opacity: 0.08; }
+    }
+
+    h1 {
+      font-size: 5rem;
+      background: linear-gradient(90deg, #0fffc1, #f9cb28);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      z-index: 3;
+      animation: flicker 3s infinite;
+    }
+
+    p {
+      font-size: 1.25rem;
+      color: #ccc;
+      max-width: 700px;
+      z-index: 3;
+      animation: fadeIn 2s ease;
+      margin: 0 auto;
+    }
+
+    .btn-futuristic {
+      background: transparent;
+      color: #0fffc1;
+      border: 2px solid #0fffc1;
+      padding: 12px 32px;
+      font-size: 1rem;
+      border-radius: 50px;
+      margin-top: 2rem;
+      z-index: 3;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .btn-futuristic:hover {
+      background: #0fffc1;
+      color: #000;
+      box-shadow: 0 0 20px #0fffc1aa;
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.85; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .light-cursor {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      width: 100vw;
+      height: 100vh;
+      background: radial-gradient(circle at center, rgba(15, 255, 193, 0.15) 0%, transparent 60%);
+      transition: background-position 0.1s;
+      z-index: 1;
+      mix-blend-mode: screen;
+    }
+
+    .light-reactive h1,
+    .light-reactive p,
+    .light-reactive .btn-futuristic {
+      transition: transform 0.2s ease-out;
+      will-change: transform;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.8rem;
+      }
+
+      p {
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
+
+      .btn-futuristic {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+      }
+
+      .bg-holograms svg {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  </style>
+
+<div class="light-cursor" id="cursorLight"></div>
+
+  <section class="hero-futuristic light-reactive">
+    <div id="particles-js"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-holograms">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /></svg>
+      <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4" /></svg>
+      <svg viewBox="0 0 24 24"><polygon points="12,2 22,22 2,22" /></svg>
+    </div>
+    <h1>PureHTML</h1>
+    <p>Premium Websites, Built for Your Brand | Designed and Published in Just 1 Day!</p>
+    <a href="#contact" class="btn-futuristic">Launch Project 🚀</a>
+  </section>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80 },
+        "color": { "value": "#0fffc1" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.15 },
+        "size": { "value": 3 },
+        "line_linked": {
+          "enable": true,
+          "distance": 120,
+          "color": "#0fffc1",
+          "opacity": 0.1,
+          "width": 1
+        },
+        "move": { "enable": true, "speed": 1 }
+      },
+      "interactivity": {
+        "events": { "onhover": { "enable": true, "mode": "repulse" } }
+      },
+      "retina_detect": true
+    });
+  </script>
+
+  <script>
+    const light = document.getElementById('cursorLight');
+    const targets = document.querySelectorAll('.light-reactive h1, .light-reactive p, .light-reactive .btn-futuristic');
+
+    document.addEventListener('mousemove', e => {
+      const x = e.clientX;
+      const y = e.clientY;
+      light.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(15, 255, 193, 0.12) 0%, transparent 60%)`;
+
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+      const percentX = (x - centerX) / centerX;
+      const percentY = (y - centerY) / centerY;
+
+      targets.forEach(el => {
+        el.style.transform = `translate(${percentX * 10}px, ${percentY * 10}px)`;
+      });
+    });
+  </script>
+
+
+
+
+
+
+<style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .premium-about {
+      position: relative;
+      background: transparent;
+      padding: 5rem 0;
+      z-index: 1;
+    }
+
+    .particles-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .stat-glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #fff;
+      transition: 0.3s;
+      border-radius: 1rem;
+    }
+
+    .stat-glass:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
+    }
+
+    .highlight {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .wave-highlight {
+      background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+    }
+
+    .shine-text {
+      display: inline-block;
+      background: linear-gradient(90deg, #0fffc1, #f9cb28, #0fffc1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 6s linear infinite;
+      background-size: 200% auto;
+    }
+
+    @keyframes shine {
+      to {
+        background-position: -200% center;
+      }
+    }
+
+    .btn-outline-info {
+      border: 2px solid #0fffc1;
+      color: #0fffc1;
+      transition: 0.3s;
+    }
+
+    .btn-outline-info:hover {
+      background: #0fffc1;
+      color: #000;
+      box-shadow: 0 0 20px #0fffc1aa;
+    }
+  </style>
+
+
+<!-- 🌌 About Section -->
+  <section id="about" class="premium-about text-white overflow-hidden">
+    <div class="particles-bg" id="particles-js"></div>
+
+    <div class="container position-relative z-1">
+      <div class="row align-items-center gy-5">
+
+        <!-- 👨‍💻 3D Tech Avatar -->
+        <div class="col-lg-5 text-center" data-aos="fade-right">
+          <img src="Hi.webp" 
+               alt="3D Avatar of Mahesh J" 
+               style="width: 100%; max-width: 400px;" 
+               class="img-fluid rounded" />
+        </div>
+
+        <!-- 🧠 Text Content -->
+        <div class="col-lg-7" data-aos="fade-left">
+          <h2 class="display-5 fw-bold mb-3 shine-text">Who Am I?</h2>
+          <p class="lead">
+            I’m <strong>Mahesh J</strong>, a <span class="typed-role text-info fw-semibold"></span> based in Bangalore.
+            I design sleek, modern websites that don’t just look stunning they convert.
+          </p>
+          <p>
+            From landing pages to full website layouts, I blend aesthetic appeal with <span class="wave-highlight">clarity, consistency & creativity</span> to the strategic design to deliver smooth, scroll-worthy experiences.
+          </p>
+
+          <!-- 📊 Stats -->
+          <div class="row text-center mt-4 g-3">
+            <div class="col-6 col-md-3">
+              <div class="stat-glass p-3">
+                <h3 class="text-info fw-bold"><span class="count" data-target="16">0</span>+</h3>
+                <small>Clients</small>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="stat-glass p-3">
+                <h3 class="text-success fw-bold"><span class="count" data-target="3">0</span>+</h3>
+                <small>Years Exp</small>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="stat-glass p-3">
+                <h3 class="text-danger fw-bold">💻</h3>
+                <small>HTML Developer</small>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="stat-glass p-3">
+                <h3 class="text-warning fw-bold">🔥</h3>
+                <small>Meta Ads Expert</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- 🚀 CTA -->
+          <div class="mt-4">
+            <a href="#contact" class="btn btn-outline-info px-4 py-2 rounded-pill fw-semibold">Work With Me</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- === Typing + Count Animation Scripts === -->
+<script>
+  const roleEl = document.querySelector('.typed-role');
+  const fullText = "Web Developer";
+  let j = 0;
+
+  function typeOnce() {
+    if (!roleEl) return;
+    roleEl.textContent = fullText.substring(0, j);
+    if (j < fullText.length) {
+      j++;
+      setTimeout(typeOnce, 220); // Slower typing speed
+    }
+  }
+
+  typeOnce();
+
+  // === Counter Animation ===
+  const counters = document.querySelectorAll('.count');
+  counters.forEach(counter => {
+    const update = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const inc = target / 50;
+      if (count < target) {
+        counter.innerText = Math.ceil(count + inc);
+        setTimeout(update, 30);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    update();
+  });
+</script>
+
+
+<!-- 🔥 Stylish Projects Section (Final Merged & Enhanced Version) -->
+<section id="services" class="py-5 bg-black text-white text-center">
+  <div class="container">
+    <h2 class="display-4 fw-bold mb-3" style="background: linear-gradient(90deg, #ff6ec4, #7873f5); -webkit-background-clip: text; color: transparent;">
+       Your Website, My Priority 🚀
+    </h2>
+    <p class="lead text-light mb-5 fade-in" style="animation-delay: 0.2s;">
+      Websites that turn clicks into  <span class="text-warning fw-semibold">real customers</span>.
+    </p>
+
+    <div class="row g-4">
+      <!-- Meta Ads Card -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="glass-card p-4 h-100 shadow-lg border border-warning border-opacity-25 rounded-4 bg-dark bg-opacity-50">
+          <h5 class="text-warning fw-bold fs-5 mb-3">📣 Meta Lead Generation</h5>
+          <p class="text-light fs-6 mb-3">
+            Boosted conversions by <strong>40%</strong> through smart targeting & hooks.
+          </p>
+          <ul class="list-unstyled text-start text-white-50 small mb-4">
+            <li>✅ Lookalike & Retargeting</li>
+            <li>🎯 Hook-based creatives</li>
+            <li>📈 10s testimonial videos</li>
+          </ul>
+
+        </div>
+      </div>
+
+      <!-- Responsive HTML Design Card -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="glass-card p-4 h-100 shadow-lg border border-info border-opacity-25 rounded-4 bg-dark bg-opacity-50">
+          <h5 class="text-info fw-bold fs-5 mb-3">💻 Responsive HTML Design</h5>
+          <p class="text-light fs-6 mb-3">
+            Sleek, mobile-first websites delivered in under <strong>1 day</strong>.
+          </p>
+          <ul class="list-unstyled text-start text-white-50 small mb-4">
+            <li>🧩 Bootstrap-based layout</li>
+            <li>⚡ Optimized for speed</li>
+            <li>🛠️ SEO & schema integrated</li>
+          </ul>
+
+        </div>
+      </div>
+
+      <!-- Reporting & Insights Card -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="glass-card p-4 h-100 shadow-lg border border-success border-opacity-25 rounded-4 bg-dark bg-opacity-50">
+          <h5 class="text-success fw-bold fs-5 mb-3">📊 Reporting & Insights</h5>
+          <p class="text-light fs-6 mb-3">
+            Turn metrics into Brand analytics & <strong> marketing decisions</strong>.
+          </p>
+          <ul class="list-unstyled text-start text-white-50 small mb-4">
+            <li>📊 Visual dashboards</li>
+            <li>🧠 Monthly PDF insights</li>
+            <li>📅 Google Sheets sync</li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🌟 AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ once: true, duration: 800 });
+</script>
+
+<!-- 🌈 Custom Styling -->
+<style>
+  .glass-card {
+    backdrop-filter: blur(12px);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .glass-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.08);
+  }
+
+  .btn-glow {
+    transition: all 0.3s ease;
+    box-shadow: none;
+  }
+
+  .btn-glow:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .fade-in {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .text-white-50 {
+    color: rgba(255, 255, 255, 0.65) !important;
+  }
+</style>
+
+
+
+
+
+<style>
+    body {
+      background-color: #000;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      color: white;
+    }
+
+    .text-gradient {
+      background: linear-gradient(90deg, #ff6ec4, #7873f5, #0fffc1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .metric-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      padding: 30px 20px;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .metric-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+
+    .icon-box {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Animated Background Grid */
+    .animated-grid {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-image: radial-gradient(#ffffff11 1px, transparent 1px);
+      background-size: 40px 40px;
+      animation: pulseGrid 4s linear infinite;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    @keyframes pulseGrid {
+      0% { background-position: 0 0; }
+      100% { background-position: 40px 40px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 🚀 Advanced Meta Ads Campaign Results -->
+<section class="py-5 bg-black text-white position-relative overflow-hidden">
+  <div class="container position-relative z-1">
+    <h2 class="text-center fw-bold mb-3 display-8 text-gradient" data-aos="fade-up">
+      Meta Ads Performance Overview
+    </h2>
+    <p class="text-center text-secondary mb-5" data-aos="fade-up" data-aos-delay="100">
+      Real-time results from ongoing ad campaigns delivering growth and reach.
+    </p>
+
+    <div class="row g-4 text-center justify-content-center">
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="150">
+        <div class="metric-card">
+          <div class="icon-box text-success">
+            <i class="bi bi-cash-coin"></i>
+          </div>
+          <h3 class="fw-bold mt-3">₹<span class="countup" data-count="28">0</span></h3>
+          <p class="small text-white-50">CPL</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="metric-card">
+          <div class="icon-box text-primary">
+            <i class="bi bi-person-plus"></i>
+          </div>
+          <h3 class="fw-bold mt-3"><span class="countup" data-count="452">0</span>+</h3>
+          <p class="small text-white-50">Leads</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="250">
+        <div class="metric-card">
+          <div class="icon-box text-warning">
+            <i class="bi bi-bar-chart-line"></i>
+          </div>
+          <h3 class="fw-bold mt-3"><span class="countup" data-count="98000">0</span>+</h3>
+          <p class="small text-white-50">Reach</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="metric-card">
+          <div class="icon-box text-danger">
+            <i class="bi bi-credit-card"></i>
+          </div>
+          <h3 class="fw-bold mt-3">₹<span class="countup" data-count="12600">0</span></h3>
+          <p class="small text-white-50">Spend</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Animated Grid Background -->
+  <div class="animated-grid"></div>
+</section>
+
+<!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<!-- CountUp JS -->
+<script src="https://cdn.jsdelivr.net/npm/countup.js@2.6.2/dist/countUp.umd.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.countup').forEach(el => {
+      const endVal = parseInt(el.getAttribute('data-count'));
+      const countUp = new CountUp.CountUp(el, endVal);
+      if (!countUp.error) {
+        countUp.start();
+      } else {
+        console.error(countUp.error);
+      }
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+  <style>
+    body {
+      background-color: #000;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+    }
+
+    .text-gradient {
+      background: linear-gradient(to right, #ff6ec4, #7873f5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2), 0 0 40px #00ffe7;
+    }
+
+    .neon-glow {
+      text-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;
+    }
+
+    .text-pink {
+      color: #ff6ec4;
+    }
+
+    .text-cyan {
+      color: #00ffe7;
+    }
+
+    .text-purple {
+      color: #9f6eff;
+    }
+
+    /* Modal Custom Style */
+    .modal-content {
+      background-color: #111;
+      border-radius: 20px;
+      color: #fff;
+      border: 1px solid #333;
+    }
+
+    .btn-close {
+      filter: invert(1);
+    }
+  </style>
+</head>
+
+  <!-- 🌌 Futuristic Portfolio Section -->
+  <section id="portfolio" class="py-5 bg-black text-white">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-4 text-gradient" data-aos="zoom-in"> Featured HTML Solution 🔥 </h2>
+      <p class="text-center text-secondary mb-5" data-aos="fade-up">
+        Explore my finest HTML works - crafted for performance, interactivity, and future-readiness.
+      </p>
+
+      <div class="row g-4">
+        <!-- Portfolio Item 1 -->
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="glass-card p-4 h-100 text-center" data-bs-toggle="modal" data-bs-target="#previewModal"
+            data-title="Fitness Trainer Landing Page"
+            data-desc="High-converting, fully responsive landing page tailored for fitness leads.">
+            <i class="bi bi-bar-chart-line-fill fs-1 text-pink mb-3 neon-glow"></i>
+            <h5 class="fw-bold mb-2">Business Website</h5>
+            <p class="text-secondary">Built for high conversion and sleek mobile UX.</p>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 2 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="glass-card p-4 h-100 text-center" data-bs-toggle="modal" data-bs-target="#previewModal"
+            data-title="Startup Portfolio"
+            data-desc="Modern, SEO-optimized, pixel-perfect portfolio built with HTML5/CSS3.">
+            <i class="bi bi-rocket-takeoff fs-1 text-cyan mb-3 neon-glow"></i>
+            <h5 class="fw-bold mb-2">Startup Portfolio</h5>
+            <p class="text-secondary">Fast-loading, minimal and futuristic design.</p>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 3 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="glass-card p-4 h-100 text-center" data-bs-toggle="modal" data-bs-target="#previewModal"
+            data-title="Digital Agency One-Pager"
+            data-desc="Clean UI/UX, scroll animations, perfect for SaaS & digital products.">
+            <i class="bi bi-cpu fs-1 text-purple mb-3 neon-glow"></i>
+            <h5 class="fw-bold mb-2">Agency One-Pager</h5>
+            <p class="text-secondary">Minimal, smooth-scrolling one-pager layout.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🪟 Preview Modal -->
+  <div class="modal fade" id="previewModal" tabindex="-1" aria-labelledby="previewModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg text-dark">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="previewModalLabel">Project Title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p id="modalDescription">Project Description</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS Animation -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const previewModal = document.getElementById('previewModal');
+    previewModal.addEventListener('show.bs.modal', event => {
+      const button = event.relatedTarget;
+      const title = button.getAttribute('data-title');
+      const desc = button.getAttribute('data-desc');
+
+      previewModal.querySelector('.modal-title').textContent = title;
+      previewModal.querySelector('#modalDescription').textContent = desc;
+    });
+  </script>
+</body>
+
+<!-- ✨ Premium Testimonials Section -->
+<section id="testimonials" class="py-5 bg-black text-white">
+  <div class="container">
+    <h2 class="text-center mb-5 display-4 fw-bold text-gradient" data-aos="fade-up">
+      Trusted by Visionaries
+    </h2>
+
+    <div class="row justify-content-center g-4">
+      <!-- Testimonial Card 1 -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="glass-card p-4 rounded-4 shadow-lg h-100">
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://i.pravatar.cc/80?img=1" class="rounded-circle me-3" width="60" height="60" alt="Raj">
+            <div>
+              <h5 class="mb-0 fw-semibold">Raj</h5>
+              <small class="text-gradient">FitPro Coach</small>
+            </div>
+          </div>
+          <p class="fst-italic">“PureHTML delivered a lightning-fast site that boosted our conversions by 40%. Mahesh is a rare talent!”</p>
+        <a href="https://maheshjeyasamraj.github.io/pt4u/" target="_blank" class="text-decoration-none text-gradient fw-bold">Visit Website</a>
+        </div>
+      </div>
+
+      <!-- Testimonial Card 2 -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="glass-card p-4 rounded-4 shadow-lg h-100">
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://i.pravatar.cc/80?img=2" class="rounded-circle me-3" width="60" height="60" alt="Arjun">
+            <div>
+              <h5 class="mb-0 fw-semibold">Arjun</h5>
+              <small class="text-gradient" >Startup Founder</small>
+            </div>
+          </div>
+          <p class="fst-italic">“I wanted something clean and modern. Mahesh nailed it with elegance and speed.”</p>
+          <a href="https://solspa.co.in/" target="_blank" class="text-decoration-none text-gradient fw-bold">Visit Website</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+   <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #1a1a1a, #121212);
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+    }
+
+    .contact-section {
+      padding: 100px 20px;
+      background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80') no-repeat center center;
+      background-size: cover;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+    }
+
+    .glass-container {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 50px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-control {
+      background-color: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+      color: #fff;
+    }
+
+    .form-control:focus {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-color: #ff6ec4;
+      box-shadow: none;
+    }
+
+    .form-floating label {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .btn-main {
+      background: linear-gradient(90deg, #ff6ec4, #7873f5);
+      border: none;
+      padding: 12px 32px;
+      font-weight: bold;
+      color: #fff;
+      border-radius: 50px;
+      transition: 0.3s;
+    }
+
+    .btn-main:hover {
+      opacity: 0.9;
+    }
+
+    .text-gradient {
+      background: linear-gradient(90deg, #ff6ec4, #7873f5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+
+
+
+<!-- 🌟 Advanced Contact Section -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="glass-container mx-auto" style="max-width: 900px;" data-aos="fade-up">
+      <div class="row g-5 align-items-center">
+        <!-- Text Side -->
+        <div class="col-md-5">
+          <h2 class="display-5 fw-bold text-gradient mb-3">Let’s Build Something Amazing</h2> 
+          
+          <p class="lead">Call to <BR> +91 63 8191 8347</p>
+        </div>
+
+        <!-- Form Side -->
+        <div class="col-md-7">
+          <form action="https://formspree.io/f/mldnqapk" method="POST" id="contact-form">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required>
+              <label for="name">Your Name</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+              <label for="email">Your Email</label>
+            </div>
+            <div class="form-floating mb-4">
+              <textarea class="form-control" name="message" id="message" placeholder="Your Message" style="height: 120px" required></textarea>
+              <label for="message">Your Message</label>
+            </div>
+            <button class="btn btn-main w-100" type="submit">Send Message</button>
+            <p id="form-status" class="mt-3 text-center fw-semibold"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✨ AOS + Bootstrap Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<!-- ✅ Form Submit Handler -->
+<script>
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      status.innerText = "✅ Message sent successfully!";
+      status.style.color = "#66ff99";
+      form.reset();
+    } else {
+      status.innerText = "❌ Something went wrong. Please try again.";
+      status.style.color = "#ff6666";
+    }
+  });
+</script>
+
+
+
+<!-- 🌌 Advanced Glassmorphism Footer -->
+<footer class="footer-glass text-white text-center py-4 position-relative">
+  <div class="container">
+    <p class="mb-1 fs-5">
+      © 2025 <strong class="text-gradient">PureHTML</strong> – Built by One Man Developer <strong>Mahesh J</strong> with Pure code!
+    </p>
+    
+    <div class="social-icons mt-3 d-flex justify-content-center gap-4">
+      <a href="#" class="icon-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="icon-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" class="icon-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- 🧊 Footer Styles -->
+<style>
+.footer-glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 -5px 20px rgba(255, 255, 255, 0.05);
+  z-index: 10;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #ff6ec4, #7873f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon-link {
+  font-size: 1.5rem;
+  color: #ffd700;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-link:hover {
+  color: #ffffff;
+  transform: scale(1.2);
+  text-shadow: 0 0 10px #ffd700;
+}
+</style>
+
+<!-- ✅ Font Awesome CDN (Include once in <head> or before </body>) -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+
+
+  <!-- Bootstrap & AOS Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  // Initialize AOS library
+  AOS.init();
+
+  // Falling icons animation setup
+  document.addEventListener("DOMContentLoaded", () => {
+    const icons = ['💰', '🤑', '👤', '📈', '💵', '📊'];
+    const container = document.querySelector('.falling-icons');
+
+    if (container) {
+      function createFallingIcon() {
+        const icon = document.createElement('div');
+        icon.classList.add('falling-icon');
+        icon.textContent = icons[Math.floor(Math.random() * icons.length)];
+        icon.style.left = Math.random() * 100 + 'vw';
+        icon.style.animationDuration = (3 + Math.random() * 4) + 's';
+        icon.style.fontSize = (20 + Math.random() * 20) + 'px';
+
+        container.appendChild(icon);
+        icon.addEventListener('animationend', () => icon.remove());
+      }
+
+      setInterval(createFallingIcon, 300);
+    }
+
+    // CountUp animation
+    const counters = document.querySelectorAll('.countup');
+
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-count');
+        const count = +counter.innerText;
+        const speed = 50;
+        const increment = target / speed;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target.toLocaleString();
+        }
+      };
+
+      updateCount();
+    });
+
+    // Portfolio modal content update
+    const previewModal = document.getElementById('previewModal');
+    if (previewModal) {
+      previewModal.addEventListener('show.bs.modal', function (event) {
+        const trigger = event.relatedTarget;
+        const title = trigger.getAttribute('data-title') || '';
+        const desc = trigger.getAttribute('data-desc') || '';
+
+        const modalTitle = previewModal.querySelector('.modal-title');
+        const modalBody = document.getElementById('modalBody');
+
+        if (modalTitle) modalTitle.textContent = title;
+        if (modalBody) modalBody.textContent = desc;
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
